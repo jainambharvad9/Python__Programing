@@ -1,0 +1,250 @@
+sorting 
+bubble sort
+
+def bubble_sort(data):
+	n=len(data)
+	for i in range(0,n-1):
+		for j in range(0,n-i-1):
+			
+			if(data[j] > data[j+1]:
+				temp=data[j]
+				data[j]=data[j+1]
+				data[j+1]=temp
+
+data = [5,10,3,5,56,1234]
+bubble_sort(data)
+print(data)
+
++========================================+
+selection
+
+
+def selection_sort(data)
+	n = len(data)
+	for i in range(0,n-1):
+		for j in range(i+1,n):
+			if(data[i] > data[j]):
+				temp=data[i]
+				data[i]=data[j]
+				data[j]=temp
+
+data=[50,10,70,6,130]
+selection_sort(data)
+print(data)
+
++===================================
+merge sort:
+
+a  = [10,20,30,40,50,60,70]
+b = [15,25,35,45,55]
+
+C[K] = a[i]<b[i]
+
+def merge_sort(a,b,c):
+	i = 0 
+	j = 0 
+	k = 0 
+
+	
+	while i <len(a) and j<len(b)
+		if a[i]  < b[j]:
+		c.insert(k,a[i])
+		k = k+1
+		i += 1
+
+		elif a[i] > b[j]:
+			c.insert(k,a[i])
+			k+=1
+			i += 1
+			j +=1
+
+		while i<len(a):
+			c.insert(k,b[j])
+			k+=1
+			j=+1
+
+a=[10,20,30,40,50,60,500]
+b=[23,45,67,87,90,900]
+c=[]
+merge_sort(a,b,c)
+print(a,b,c)
+
+
++=========================================================+
+#abstract data type
+stack : push,pop,peep,show
+
+class Stack:
+	def __init__(self):
+	# constructor
+	self.item=[]
+	
+	def count(self)
+		return len(self.item);
+	
+	def push(self,value):
+		# push code here
+		self.item.insert(self.count(),value)
+	def pop(self):
+		if len(self.item) > 0:
+			d = self.item.pop()
+			print("poped item=",d)
+		else:
+			print(" stack is underflow")
+	def peep(self,pos):
+		top = self.count()-1
+		if top=pos+1 < 0:
+			print(" invalid pos")
+		else:
+			print(" fount = ",self.item[top-pos+1]
+
+	def show(self):
+		c  = self.count() - 1;
+		for i in renge(c ,-1,-1):
+			print(self.item[i])
+
+s  = Stasck()
+
+while True:
+	print(" 1 . Push")
+	print(" 2 . Pop")
+	print(" 3 . Peep")
+	print(" 4 . Show")
+	print(" 5 . Exit")
+	ch=ini(input("enter your choice :"))
+
+	if ch==1:
+		value=int(input("enter value"))
+		s.push(value)
+	elif ch==2:
+		s.pop()
+	elif ch==3:
+		pop=int(input("enter pos"));
+		s.peep(pos)
+	elif ch==4:
+		s.show()
+	else:
+		break;
+=============================================================
+#Queue
+class Queue:
+	def__init__(self):
+		self.item=[]
+	def length(self):
+		return(self.item);
+	def enQueue(self,value):
+		self.item.insert(self.length(),value)
+
+	def deQueue(self):
+		if len(self.item)>0:
+		d = self.item.pop(0)
+		print("delet item=",d)
+		else:
+		print("queue is underflow")
+	def isEmpty(self):
+		if len(self.item) > 0:
+			retuer False;
+		else:
+			return True;
+	def show(self)
+		c  = self.length():
+		for i in range(0,c):
+			print(self.item[i])
+
+s  = queue();
+	while true:
+	print(" 1.Enqueue")
+	print(" 2.deQueue")
+	print(" 3.isEmpty")
+	print(" 4.length")
+	print(" 5.show")
+	print(" 6.Exit")
+	ch = int(input("Enter your Choice:")
+	
+	if ch==1:
+	value =  int(Input("enter val "));
+	elif ch==2:
+		s.deQueue()
+	elif ch==3:
+		print("is Empty=",s.isEmpty())
+	elif ch==4:
+		print("count=",s,length())
+	
+	elif ch==5:
+		s.show()
+	else:
+		breck;
+
+
+
+===========================================
+#list
+
+class List:
+	def__init__(self):
+		self.item=[]
+	def length(self):
+		return(self.item);	
+	def get(self.pos):
+		if(pos > = 0 and pos < self.length()-1:
+		return self.item[pos];
+	
+	def insert(self,value,pos):
+		self.item.insert(pos,value)
+
+	def delete(self,pos):
+		
+		d = self.item.pop(pos)
+		print("poped item = ",d)
+	
+	def replace(self.pos,newval):
+		self.item[pos] = newval;
+	def isEmpty(self):
+		if len(self.item) > 0:
+			return False;
+		else:
+			return True
+
+	def show(self):
+		c  = self.length();
+		for i in range(0,c):
+			print(self.item[i])
+
+s  = List();
+	while True:
+		print("1 .Inser")
+		print("2 .Delete")
+		print("3 .isEmpty")
+		print("4 .Length")
+		print("5 .Show")
+		print("6 .Replace")
+		print("7 .Get")
+		print("8 .Exit")
+		ch = int(input("enter your choice:"))
+		
+		if ch==1:
+			value = int(input("enter val"));
+			pos=int(input("enter pos"));
+			s.insert(value,pos)
+
+		elif ch==2:
+			pos= int(input("enter pos"));
+			s.delete(pos)
+		elid ch == 3:
+			print(" "s.isEmpty())
+
+		elif ch == 4:
+			print(s.length())
+		elif ch == 5:
+			s.show():
+		
+		elif ch == 6:
+			newval - int(input("enter val"));
+			pos = int(input("enter pos"));
+			s.replecec(pos,newval)
+		
+		elif ch == 7:
+			pos= int(input("enter ps"));
+			print(s.get(pos))
+		else:
+		breck;

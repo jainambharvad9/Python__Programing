@@ -1,0 +1,16 @@
+Tuple:
+- collection of data 
+- declare with()
+- item of tuple can't be changed
+- it is know as unmuteble list
+- diff between list and tuple
+1) list item are mutable
+1) tuple items are unmutble
+
+2) list declare with[]
+2) tuple are declare with()
+
+take 10 items in tuple and calculate total and avg
+take 10 items in tuple and display unique val 
+take 10 items in tuple and sort data
+take 2 tuple and mereg into new list

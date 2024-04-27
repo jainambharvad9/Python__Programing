@@ -1,0 +1,57 @@
+File Handling 
+
+- File handling is an important part of any web or window application.
+- Python has several fun for reading ,writing ,updateing and deleting file.
+
+1) open a file
+- the key fun for working with python is the open()
+mode
+
+r : read 
+w : Writing
+a : Append
+x : Create 
+
+Example : f = open(" msg.txt',"w");
+
+2) write  data into file
+- to write data into file write() is used.
+
+3) close file. 
+- We have to close file after creating , appending or reading file.
+
+Ex:
+W Py code to write into msg.txt file
+
+f = open(" msg.txt","w")
+f.write(" wlcm ")
+f.write(" /n hello World")
+f.write(" /n hello")
+f.close()
+print(" File Created ")
+
+4) read data from file
+- to read data from file read() is used.
+
+
+Ex : 
+write py code to read msg.txt file.
+
+f = open (" msg.txt","r")
+print(f.read())
+f.close() 
+
+5) read iine by line
+
+ f = open (" msg.txt")
+ for line in f:
+	print(line)
+
+f.close()
+
+Python String Formatting
+
+price = 100
+item = " MOUSE " 
+text =  " item name is {} value of iten is {} "
+print(text.format(price,item)
