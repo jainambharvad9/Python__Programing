@@ -11,10 +11,14 @@ def welcome(name):
 def login():
     if request.method == 'POST':
         user=request.form["name"]
-        return redirect(url_for('Welcome',name=user))
+        
+        return redirect(url_for('welcome', name=user))
+
     else:
         user=request.args.get("name")
-        return redirect(url_for('Welcome',name=user))
+        
+        return redirect(url_for('welcome', name=user))
+
     
 if __name__ == '__main__':
     app.run(debug=True)

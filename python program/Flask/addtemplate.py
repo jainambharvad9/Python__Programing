@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+from flask import Flask,url_for,redirect
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
+app = Flask (__name__)
+
+@app.route('/')
+
+def index():
+    str=""" 
+    <html>
+    <head>
+    <style>
+    
     body {
         margin: 0;
         padding: 0;
@@ -178,19 +181,12 @@
         border-bottom-left-radius: 45px;
         border-top-left-radius: 1px;
     }
-</style>
-
-<body>
-    <form action="http://localhost:5000/login" method="post">
-
-        <p>Enter Name:</p>
-        <p><input type="text" name="name"></p>
-        <p><input class="btn10" type="submit" value="submit"></p>
-
-    </form>
-    <div class="title-div">
-        <h1>CSS BUTTON EXAMPLE</h1>
-    </div>
+    
+    </style>
+    </head>
+    
+    <body>
+    <p> Hii Jay Shree ram <p>
     <div class="container">
 
         <div class="btn1">
@@ -245,6 +241,10 @@
             <h2>17</h2>
         </div>
     </div>
-</body>
+    </body>
+    </html>
+"""
+    return str
 
-</html>
+if __name__ == '__main__':
+    app.run(debug=True)
