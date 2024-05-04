@@ -6,8 +6,8 @@ app = Flask(__name__)
 def index():
     return render_template('cookies.html')
 
-@app.route('/sercookie',methods =['POST','GET'])
-def setcooki():
+@app.route('/cookies',methods =['POST','GET'])
+def cookies():
     if request.method == 'POST':
         user = request.form['nm']
         resp = make_response(render_template('readcooki.html'))
@@ -17,5 +17,13 @@ def setcooki():
 @app.route('/getcooki')
 def getcooki():
     name = request.cookies.get('userID')
-    return 
+    if name:
+        return '<h1> Welcome ' + str(name) + '</h1>'
+    else:
+        return '<h1> Welcome ' +str(name)+ '</h1>' 
+
+     
+if __name__ == '__main__':
+    app.run(debug=True)
+    
     
