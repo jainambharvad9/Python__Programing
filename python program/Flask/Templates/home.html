@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+      <h1> Flask MSG Flashing Ex... </h1>
+      {% with messages = get_flashed_messages()%}
+      {%if messages%}
+      <ul>
+        {% for message  in messages %}
+        <li> {{ message }} </li>
+        {% endfor%}
+      </ul>
+      {% endif %}
+      {% endwith %}
+
+      <p>Do You Want to <a href={{url_for('login')}}> <b> Login...?</b></a> </p>
+
+    </body>
+</html>
