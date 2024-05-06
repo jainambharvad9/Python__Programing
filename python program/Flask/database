@@ -1,5 +1,0 @@
-SELECT name,
-       address,
-       city,
-       pin
-  FROM [student ];
