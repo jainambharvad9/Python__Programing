@@ -1,0 +1,90 @@
+{% block bootsrap %}
+{% load bootstrap4 %}
+
+
+{# CSS Bootstrap #}
+{% bootstrap_css %} 
+{% endblock bootsrap %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+ 
+
+<!-- Template Main CSS File -->
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+<style>
+
+h3{
+    color:red;
+}
+
+</style>
+</head>
+
+
+<section id="contact" class="contact">
+    <div class="container co">
+
+      <div class="section-title">
+        <h2>Login </h2>
+        <p>Welcome To Over Websites.</p>
+        <h4>Plase Login</h4>
+      </div>
+      {% for message in messages%}
+      <h3>{{ message}}</h3>
+      {% endfor %}
+        <div class="col-lg-12 ">
+          <form action="login" method="post">
+             {% csrf_token %}
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="username_or_email">User Name/E-mail</label>
+                <input type="text" name="username_or_email" class="form-control" id="name" required>
+              </div>
+            </div>
+            <div class="row">  
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" required>
+                  </div>
+            </div>           
+        </div>
+            <div class="text-center"><button type="submit" class="btn btn-info" >Login</button></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->  
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+{% comment %} <h1>Login Now</h1>
+<style>
+h3{
+color: red;
+}
+</style>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+<form action="login" method="POST">
+  {% csrf_token %}
+<p>Username:</p>
+<input type="text" name="username"/>
+<p>Password:</p>
+<input type="password" name="password"/><br>
+<input type="submit"/>
+</form> {% endcomment %}
+
+
+
